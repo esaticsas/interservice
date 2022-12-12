@@ -1,0 +1,45 @@
+{
+    "name": "esaticsas/interservice",
+    "description": "Shipping method for interservice, Interservicios s.a.s",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Esaticsas\\Interservice\\": ""
+        }
+    },
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Esaticsas S.A.S",
+            "email": "jonathan.casas@Esaticsas.com",
+            "homepage": "https://www.Esaticsas.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "jonathan.casas@Esaticsas.com"
+    },
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "magento/framework": "103.0.*",
+        "magento/module-backend": "102.0.*",
+        "magento/module-catalog": "104.0.*",
+        "magento/module-catalog-inventory": "100.4.*",
+        "magento/module-config": "101.2.*",
+        "magento/module-directory": "100.4.*",
+        "magento/module-quote": "101.2.*",
+        "magento/module-sales": "103.0.*",
+        "magento/module-shipping": "100.4.*",
+        "magento/module-store": "101.1.*",
+        "esatic/dropdowncity": "^1.0",
+        "ext-soap": "*",
+        "ext-json": "*"
+    }
+}

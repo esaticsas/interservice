@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Esaticsas_Interservice::base" title="Interservice / Interservicios" module="Esaticsas_Interservice"
+             sortOrder="60"
+             resource="Esaticsas_Interservice::base"/>
+        <add id="Esaticsas_Interservice::packing" title="Paquetes" module="Esaticsas_Interservice" sortOrder="10"
+             action="Esaticsas/interservice" resource="Esaticsas_Interservice::packing"
+             parent="Esaticsas_Interservice::base"/>
+    </menu>
+</config>

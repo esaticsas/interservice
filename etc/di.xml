@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="Esaticsas_interservice_listing_data_source" xsi:type="string">
+                    Esaticsas\Interservice\Model\ResourceModel\Packaging\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Esaticsas\Interservice\Model\ResourceModel\Packaging\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">Esaticsas_interservice_packaging</argument>
+            <argument name="resourceModel" xsi:type="string">Esaticsas\Interservice\Model\ResourceModel\Packaging
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Esaticsas\Interservice\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Esaticsas\Interservice\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">interservices</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">Esaticsas\Interservice\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Esaticsas\Interservice\Model\GetCityCodeInterface"
+                type="Esaticsas\Interservice\Model\GetCityCode"/>
+    <preference for="Esaticsas\Interservice\Api\TrackingInterface"
+                type="Esaticsas\Interservice\Model\Tracking"/>
+</config>
